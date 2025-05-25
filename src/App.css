@@ -1,0 +1,141 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #c40404; /* Wells Fargo red */
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  color: #f6c700; /* Accent gold */
+  font-weight: 500;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1.2rem;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.message {
+  margin-bottom: 1.2rem;
+  max-width: 75%;
+  line-height: 1.5;
+}
+
+.message.user {
+  margin-left: auto;
+  background: #ffe5e5;
+  border-radius: 18px 18px 0 18px;
+  padding: 0.8rem 1.2rem;
+  color: #c40404;
+  font-weight: 500;
+  border: 1px solid #c40404;
+}
+
+.message.assistant {
+  margin-right: auto;
+  background: #f0f0f0;
+  border-radius: 18px 18px 18px 0;
+  padding: 0.8rem 1.2rem;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.message-content {
+  word-wrap: break-word;
+}
+
+.message-timestamp {
+  font-size: 0.7rem;
+  color: #999;
+  margin-top: 0.3rem;
+  text-align: right;
+}
+
+.typing-indicator {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  background-color: #c40404;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.chat-input-container {
+  display: flex;
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input-container input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+
+.chat-input-container button {
+  padding: 0.75rem 1.5rem;
+  background: #c40404;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input-container button:hover:not(:disabled) {
+  background: #a10303;
+}
+
+.chat-input-container button:disabled {
+  background: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
