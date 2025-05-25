@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './chat.css';
 import io from 'socket.io-client';
-const socket = io('https://wflivechatserver.netlify.app/');
+const socket = io('http://ec2-13-201-101-4.ap-south-1.compute.amazonaws.com:5001');
+
+
 
 function AgentApp() {
   const [messages, setMessages] = useState([]);
