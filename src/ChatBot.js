@@ -94,7 +94,7 @@ import './components/chat.css';
 const socket = io('http://ec2-16-170-208-169.eu-north-1.compute.amazonaws.com:5001');
 
 function ChatBot({ onBack }) {
-  const [activeTab, setActiveTab] = useState('user');
+  const [activeTab] = useState('user');
   const [chatState, setChatState] = useState({
     status: 'idle',
     messages: [],
